@@ -1,0 +1,18 @@
+.jumbotron {
+    padding: 80px ;
+    background: url("../images/plane2.jpg") top center no-repeat;
+}
+
+.jumbotron h1 {
+    margin-bottom: 0;
+    font-family: Bebas Neue, sans-serif;
+    font-size: 60px;
+    line-height: 1;
+    color: #cbd3da;
+}
+
+.jumbotron p {
+    font-family: Roboto, sans-serif;
+    color: #cbd3da;
+}
+

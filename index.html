@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чертежи авиамоделей | Чертежи радиоуправляемых моделей самолётов</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">rcPlans.ru</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPlans" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Чертежи
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Модели из пенопласта</a>
+                    <a class="dropdown-item" href="#">Модели из бальзы</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Неразобранные</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Блог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">ЧПУ - резка</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLibrary" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Библиотека
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Статьи и файлы</a>
+                    <a class="dropdown-item" href="#">Инструкции и руководства</a>
+                    <a class="dropdown-item" href="#">Книги по моделизму</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Сайты по моделизму</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Магазины</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Искать</button>
+        </form>
+    </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>rcPlans.ru</h1>
+        <p>Крупнейшая в рунете коллекция чертежей авиамоделей</p>
+    </div>
+</div>
+
+<section class="filter">
+    <div class="container">
+        <div class="card">
+            <h6 class="card-header">
+                <span>Это не поиск, а фильтр. Чем меньше ограничений введете, тем больше чертежей увидите</span>
+            </h6>
+            <div class="card-body">
+
+                <form>
+                    <div class="form-group row">
+                        <label for="formModelType" class="col-sm-2 col-form-label">Тип модели</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="formModelType">
+                                <option>Все</option>
+                                <option>Биплан</option>
+                                <option>Летающее крыло</option>
+                                <option>Гидроплан</option>
+                                <option>Гонка</option>
+                                <option>Импеллерный</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="formModelEngine" class="col-sm-2 col-form-label">Тип Двигателя</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="formModelEngine">
+                                <option>Все</option>
+                                <option>Безмоторый</option>
+                                <option>Электро</option>
+                                <option>ДВС</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="formModelMaterial" class="col-sm-2 col-form-label">Материал</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="formModelMaterial">
+                                <option>Все</option>
+                                <option>Дерево</option>
+                                <option>Пенопласт</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="formModelWingspan" class="col-sm-2 col-form-label">Размах, мм</label>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="password" class="form-control" id="formModelWingspan" placeholder="0">
+                                </div>
+                                <h4> - </h4>
+                                <div class="col">
+                                    <input type="password" class="form-control" placeholder="10000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="formModelWeight" class="col-sm-2 col-form-label">Вес, г</label>
+                        <div class="col-sm-10">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="password" class="form-control" id="formModelWeight" placeholder="От">
+                                </div>
+                                <h4> - </h4>
+                                <div class="col">
+                                    <input type="password" class="form-control" placeholder="До">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Найти чертежи</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="plans mt-5">
+    <div class="container">
+        <div class="card mt-3">
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="images/01.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <h3 class="card-title">Fiable</h3>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Тип:</th>
+                                <td>Планер</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Двигатель:</th>
+                                <td>электрический</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Материал:</th>
+                                <td>пенопласт</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Размах:</th>
+                                <td>2000 мм</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Вес:</th>
+                                <td>1050 г</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Автор:</th>
+                                <td>Hilmar Lange</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-sm btn-outline-secondary">Источник</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Формат:</th>
+                                <td>инструкция, PDF векторный</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-primary">Скачать чертеж</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="images/01.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <h3 class="card-title">Fiable</h3>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Тип:</th>
+                                <td>Планер</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Двигатель:</th>
+                                <td>электрический</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Материал:</th>
+                                <td>пенопласт</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Размах:</th>
+                                <td>2000 мм</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Вес:</th>
+                                <td>1050 г</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Автор:</th>
+                                <td>Hilmar Lange</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-sm btn-outline-secondary">Источник</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Формат:</th>
+                                <td>инструкция, PDF векторный</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-primary">Скачать чертеж</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="row">
+                <div class="col-md-7">
+                    <img src="images/01.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-5">
+                    <div class="card-body">
+                        <h3 class="card-title">Fiable</h3>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Тип:</th>
+                                <td>Планер</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Двигатель:</th>
+                                <td>электрический</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Материал:</th>
+                                <td>пенопласт</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Размах:</th>
+                                <td>2000 мм</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Вес:</th>
+                                <td>1050 г</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Автор:</th>
+                                <td>Hilmar Lange</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-sm btn-outline-secondary">Источник</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Формат:</th>
+                                <td>инструкция, PDF векторный</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><a href="#" class="btn btn-block btn-primary">Скачать чертеж</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="mt-3">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link">Назад</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><span class="page-link">2</span></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                <li class="page-item"><a class="page-link" href="#">8</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Вперёд</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<footer class="bg-dark mt-5">
+    <div class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <h5 class="text-white">rcPlans.ru</h5>
+            <small class="d-block mb-3 text-muted">© 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5 class="text-white">Услуги</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Чертежи</a></li>
+                <li><a class="text-muted" href="#">ЧПУ-резка</a></li>
+                <li><a class="text-muted" href="#">Магазины</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5 class="text-white">Ресурсы</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Блог</a></li>
+                <li><a class="text-muted" href="#">Статьи</a></li>
+                <li><a class="text-muted" href="#">Книги</a></li>
+                <li><a class="text-muted" href="#">Ссылки</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5 class="text-white">О нас</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">О сайте</a></li>
+                <li><a class="text-muted" href="#">История</a></li>
+                <li><a class="text-muted" href="#">Команда</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="text-center">Created by Konstantin Kokarev</div>
+</div>
+</footer>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
