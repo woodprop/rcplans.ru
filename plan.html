@@ -139,6 +139,7 @@
                         </ul>
                     </div>
                 </div>
+<!--                video start-->
                 <div class="videoWrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/gUm7-lCx6dQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -146,6 +147,42 @@
                 <div class="videoWrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/wxTma-zdj0g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+<!--                video end-->
+                <hr>
+
+<!--                COMMENTS start-->
+                <div class="comments">
+                    <div class="comments_wrapper">
+                        <h5>Комментариев пока нет...</h5>
+<!--                       >>>>> Вывод комментариев здесь <<<<< -->
+                    </div>
+                    <hr>
+                    <h3>Добавить комментарий</h3>
+                    <p>Ваш e-mail не будет опубликован. Обязательные поля помечены <span class="text-danger">*</span></p>
+                    <form>
+                        <div class="form-group">
+                            <label for="commentFormText">Комментарий <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="commentFormText" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="commentFormName">Имя <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="commentFormName" placeholder="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="commentFormEmail">E-mail <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="commentFormEmail" placeholder="vasya@pupkin.ru">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="commentFormSite">Сайт</label>
+                            <input type="text" class="form-control" id="commentFormSite" placeholder="">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить комментарий</button>
+                    </form>
+                </div>
+<!--                COMMENTS end-->
             </div>
         </div>
     </div>
@@ -160,7 +197,7 @@
                 <h5 class="text-white">rcPlans.ru</h5>
                 <small class="d-block mb-3 text-muted">© 2017-2020</small>
             </div>
-            <div class="col-6 col-md">
+            <div class="col-6 col-md d-none d-sm-block">
                 <h5 class="text-white">Услуги</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Чертежи</a></li>
@@ -168,7 +205,7 @@
                     <li><a class="text-muted" href="#">Магазины</a></li>
                 </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="col-6 col-md d-none d-sm-block">
                 <h5 class="text-white">Ресурсы</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Блог</a></li>
@@ -177,7 +214,7 @@
                     <li><a class="text-muted" href="#">Ссылки</a></li>
                 </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="col-6 col-md d-none d-sm-block">
                 <h5 class="text-white">О нас</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">О сайте</a></li>
