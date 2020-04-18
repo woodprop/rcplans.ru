@@ -16,3 +16,35 @@
     color: #cbd3da;
 }
 
+.card-title a {
+    color: inherit;
+}
+
+@media(max-width: 767px)  {
+    .jumbotron {
+        padding: 20px;
+        background-position-x: left;
+        background-position-y: top;
+        background-size: cover;
+    }
+
+    .jumbotron h1 {
+        font-size: 30px;
+    }
+
+    .videoWrapper {
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}
